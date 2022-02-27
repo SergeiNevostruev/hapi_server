@@ -1,0 +1,33 @@
+Команда для миграции
+
+создание файла миграции (-n - информативное имя)
+./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -n AddDateColumn
+
+запуск миграции
+./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run
+
+отмена миграции
+./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert
+
+
+
+
+
+Команды для докера
+
+docker login ===> авторизация
+
+docker network create some-network ===> создание сети в которой запускается докер
+
+docker run --rm -d -e POSTGRES_PASSWORD=password --name postgres --network some-network postgres ===> вариант запуска докера с постгресом
+
+docker ps ===> проверка запущенных процессов
+
+docker exec -it postgres bash ===> вход в командную строку докера для работы с psql
+
+psql -h localhost -p 5432 -U postgres ===> вход в базу данных
+
+
+не стал использовать
+//$ docker run -it --rm --network some-network postgres psql -h some-postgres -U postgres ===> вариант запуска докера с постгресом
+// docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=secret -d postgres ===> вариант запуска докера с постгресом

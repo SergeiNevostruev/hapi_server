@@ -5,16 +5,16 @@
    "username": "demo_user",
    "password": "user",
    "database": "test",
-   "synchronize": true,
+   "synchronize": false,
    "logging": false,
    "entities": [
       "entity/*.ts"
    ],
    "migrations": [
-      "migration/**/*.ts"
+      "migration/*.ts"
    ],
    "subscribers": [
-      "subscriber/**/*.ts"
+      "subscriber/*.ts"
    ],
    "cli": {
       "entitiesDir": "entity",

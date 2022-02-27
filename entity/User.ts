@@ -16,7 +16,9 @@ export class User {
     age: number;
 
     @CreateDateColumn()
-
     date: string;
+
+    @CreateDateColumn()
+    date_test: string;
 
 }
