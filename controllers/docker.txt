@@ -1,0 +1,12 @@
+docker login
+// docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=secret -d postgres
+docker ps
+
+
+docker network create some-network
+//$ docker run -it --rm --network some-network postgres psql -h some-postgres -U postgres
+
+docker run --rm -d -e POSTGRES_PASSWORD=password --name postgres --network some-network postgres
+docker exec -it postgres bash
+
+psql -h localhost -p 5432 -U postgres
