@@ -11,8 +11,8 @@ import user_route from './routes/user_route'
 // =====================================================================================
 export const init = async (): Promise<void> => {
     const server = Hapi.server({
-        port: 3000,
-        host: 'localhost',
+        port: 8080,
+        host: '0.0.0.0',
     });
 
     await server.register(plugins);

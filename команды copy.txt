@@ -1,0 +1,5 @@
+docker build -t hapijs_psql .
+
+docker images
+
+docker run --rm -it -p 3000:3000 hapijs_psql
